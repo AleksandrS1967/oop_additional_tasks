@@ -14,7 +14,26 @@
 
 
 class Bird:
-    pass
+    def __init__(self):
+        self.birds = "Flying"
+
+    def fly(self):
+        print(self.birds)
+
+
+class Penguin(Bird):
+    def fly(self):
+        print("I am a penguin and cannot fly")
+
+
+class Eagle(Bird):
+    def __init__(self):
+        super().__init__()
+        self.eagle = "Hunting"
+
+    def hunt(self):
+        print(self.eagle)
+
 
 
 # код для проверки 

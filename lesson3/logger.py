@@ -8,8 +8,13 @@
 
 
 class Logger:
-    pass
+    def __init__(self, filename: str):
+        self.filename = filename
 
+    def __call__(self, message):
+        print(self.filename)
+        self.filename = message
+        print(self.filename)
 
 # код для проверки 
 logger = Logger("log.txt")

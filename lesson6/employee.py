@@ -14,8 +14,30 @@
 """
 
 
-class Employee:
-    pass
+class Person:
+    def __init__(self, name, age, pay):
+        self.name = name
+        self.age = age
+        self.pay = pay
+
+
+class Employee(Person):
+    def __init__(self, name, age, pay):
+        super().__init__(name, age, pay)
+        try:
+            if self.age < 18 or self.age > 127:
+                print("raises ValueError('Возраст должен быть не меньше 18 и не больше 127')")
+        except ValueError:
+            raise ValueError('Возраст должен быть не меньше 18 и не больше 127')
+        try:
+            if self.pay < 16242:
+                print("raises ValueError('Оплата труда не может быть меньше 16242')")
+        except ValueError:
+            raise ValueError('плата труда не может быть меньше 16242')
+
+
+
+
 
 
 # код для проверки

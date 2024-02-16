@@ -12,18 +12,28 @@
 
 
 class BankAccount:
-    pass
+    def __init__(self, balance):
+        self.balance = balance
+
+    # def deposit(self, amount):
+    #     self.balance += amount
+    #
+    # def withdraw(self, amount):
+    #     self.balance -= amount
+    #
+    # def close(self):
+    #     return self.withdraw(self.balance)
 
 
 # код для проверки 
 account = BankAccount(1000)
 print(account.balance)  # 1000
 
-account.deposit(500)
-print(account.balance)  # 1500
-
-account.withdraw(200)
-print(account.balance)  # 1300
-
-account.close()
-print(account.balance)  # 0
+# account.deposit(500)
+# print(account.balance)  # 1500
+#
+# account.withdraw(200)
+# print(account.balance)  # 1300
+#
+# account.close()
+# print(account.balance)  # 0
